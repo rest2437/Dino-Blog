@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Dino from "./Dino";
+import PhotoOne from "./PhotoOne";
+import Reptiles from "./Reptiles";
 
 function App() {
+  let dino = {
+    title: "Dinosaurs are awesome",
+    author: "Stealthy Stegosaurus",
+    body: "Check out this body property",
+    comments: ["First!", "Great Post", "Hire this author now!"],
+  };
+  let reptiles = {
+    list: "Crocodiles, Snakes",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Dino
+        title={dino.title}
+        author={dino.author}
+        body={dino.body}
+        comments={dino.comments}
+      />
+      <Reptiles list={reptiles.list} />
+      <PhotoOne />
     </div>
   );
 }
