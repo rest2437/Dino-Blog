@@ -13,6 +13,7 @@ code {
 }
 
 html {
+  background-color: grey;
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -22,17 +23,23 @@ div {
 }
 
 .A {
+  border: 2px solid orange;
+  background-color: black;
+  border-radius: 15%;
+  color: white;
   font-size: 50px;
   text-align: center;
 }
 
 .E {
+  color: white;
   font-size: 20px;
 }
 
 .B,
 .C,
 .E {
+  color: black;
   font-weight: 400;
 }
 
@@ -40,11 +47,13 @@ img {
   text-align: center;
   height: 300px;
   width: 400px;
-  border-radius: 20%;
+  border-radius: 5%;
 }
 
 .rep {
+  border: 2px solid orange;
   background-color: black;
+  border-radius: 15%;
   color: white;
   border: 2px solid orange;
 }
