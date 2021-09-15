@@ -1,8 +1,9 @@
 import React from "react";
+import Comment from "./Comment";
 
 function Dino(props) {
   return (
-    <div>
+    <div className="dino">
       <h1 className="A">{props.title}</h1>
       <h2 className="B">by: {props.author}</h2>
       <h2 className="C">{props.body}</h2>

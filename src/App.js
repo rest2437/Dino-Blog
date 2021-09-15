@@ -15,7 +15,7 @@ function App() {
     list: "Crocodiles, Snakes",
   };
   return (
-    <div>
+    <div className="App">
       <Dino
         title={dino.title}
         author={dino.author}
