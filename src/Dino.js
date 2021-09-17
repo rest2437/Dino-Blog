@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Comment from "./Comment";
 import { Alert } from "react-bootstrap";
+// import { VFXSpan } from "react-vfx";
 
 function Dino(props) {
   let [state, setState] = useState({
@@ -10,7 +11,10 @@ function Dino(props) {
   let allComments = props.comments.map(function (c, i) {
     return <Comment key={i} body={c} />;
   });
-  function handleBodyEdit() {}
+  function handleBodyEdit() {
+    let input = prompt("Whats the new edit for the blog post");
+    setState({ body: input });
+  }
 
   function handleFormEdit(e) {
     e.preventDefault();
@@ -33,6 +37,7 @@ function Dino(props) {
         <Alert.Heading>New Blog post</Alert.Heading>
         <p>
           <h2 className="C">{state.body}</h2>
+          <button onClick={handleBodyEdit}>Edit post</button>
         </p>
         <hr />
         <p className="mb-0">{props.author}</p>
